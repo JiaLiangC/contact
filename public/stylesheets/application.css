@@ -1,0 +1,31 @@
+@import "bootstrap.min.css";
+
+#parent{
+    background: url('/images/arrow.png') right center no-repeat; 
+    width: 220px;
+    height: 30px;
+    overflow: hidden;
+    border: solid 1px #ccc;
+}
+
+#parent select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background:transparent;
+    border:none;
+    padding-left:10px;
+    width: 220px;
+    height:100%;    
+}
+select::-ms-expand { display: none; }
+.error{
+  color: #a94442;
+  font-size: 15px;
+}
+.contact-detail{
+    display: block;
+    content: "";
+    clear: both;
+    margin-top: 40px;
+}

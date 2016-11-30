@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type='text/javascript' src="/javascripts/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <%if session[:message]%>
+    <div class="alert alert-success">
+      <p><%= session.delete(:message)%></p>      
+    </div>
+    <%end%>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+
+</html>

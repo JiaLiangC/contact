@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <form action="/contacts" method="post" role="form">
+      <div class="form-group">
+        <label class="control-label">Name</label>
+        <input type="text" name="name" class="form-control" value="<%= params[:name] unless @errors["name"]%>"  required/>
+          <div class="error "><%= @errors["name"]%></div>
+      </div>
+
+      <div class="form-group">
+        <label> Phone</label>
+        <input type="text" name="phone" class="form-control" value="<%= params[:phone] unless @errors["phone"]%>" required/>
+          <div class="error "><%= @errors["phone"]%></div>
+      </div>
+      
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" value="<%= params[:email] unless @errors["email"]%>" required/>
+        <div class="error"><%= @errors["email"]%> </div>
+      </div>
+      
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>

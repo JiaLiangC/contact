@@ -1,0 +1,13 @@
+<div class="panel">
+  <div class="col-md-4 col-md-offset-4">
+    <h4 >New Category</h3>
+    <form action="/categories" method="post">
+      <div class="form-group">
+        <label>Category Name:</label>
+        <input type="text" name="name"  required="required"/>
+        <input type="hidden" name="url" value="<%= params[:url]%>" />
+        <button type="submit" class="btn btn-success"> submit</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 30px;">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+      <%if @categories %>
+          <label>Groups</label>
+          <ul class="nav nav-tabs">
+            <li class="<%='active' unless params[:category]%>"><a href="/contacts">All</a></li>
+            <%@categories.each do |c|%>
+              <li class="<%='active' if params[:category]== c%>">
+                <a  href="/contacts?category=<%= c%>"><%=c%></a>
+              </li>
+            <%end%>
+          </ul>
+      <%end%>
+
+      <div>
+      <h3>Contact List</h3>
+        <ul class="list-group">
+          <%@contact_list.each do |contact|%>
+            <li class="list-group-item">
+              <%= contact[:name]%>
+              <a class="pull-right" href="/contacts/<%=contact[:id]%>">detail</a>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+
+      <div>
+        <a class="btn btn-primary" href="/contacts/new">New contact</a>
+        <a class="btn btn-primary" href="/categories/new">New category</a>
+      </div>
+
+    </div>
+  </div>
+</div>
